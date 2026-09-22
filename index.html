@@ -133,6 +133,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:18px;justify-content:space-between}
     <a class="link" href="#models">Models</a>
     <a class="link" href="#device">On device</a>
     <a class="link" href="#status">Status</a>
+    <a class="link" href="#setup">Setup</a>
   </div>
 </nav>
 
@@ -394,9 +395,17 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:18px;justify-content:space-between}
     <p class="sub">Two stores, different jobs — one keyed on the gloss sequence, one on what the
       user actually picked.</p>
 
-    <h3>Translation memory</h3>
-    <p>The same engine implemented twice: Kotlin (Room/SQLite) and TypeScript (any SQLite binding
-      via a six-line adapter). Standalone, dependency-free, independently tested.</p>
+    <h3>Sentence memory — what the app ships</h3>
+    <p>Records <em>which candidate the user picked</em> per exact gloss sequence and resurfaces it
+      ahead of fresh generation, as app-private JSON with atomic writes. The Memory screen reviews
+      and forgets entries. A sequence can legitimately mean different things on different
+      occasions, so picking a different sentence later <em>adds</em> an option rather than
+      replacing the earlier one — and once a sequence has enough remembered, the LLM isn't called
+      for it again.</p>
+
+    <h3>Translation memory — the engine behind it</h3>
+    <p>A standalone retrieval engine implemented twice, Kotlin (Room/SQLite) and TypeScript, for
+      corpora larger than a JSON file should hold. Dependency-free and independently tested.</p>
 
     <div class="stats">
       <div class="stat"><b>~1 µs</b><span>exact lookup, Kotlin</span></div>
@@ -422,13 +431,6 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:18px;justify-content:space-between}
       <li><strong>Bounded.</strong> 20 000 entries, least-used/least-recent eviction, pinned
         entries never evicted.</li>
     </ul>
-
-    <h3>Sentence memory</h3>
-    <p>Records <em>which candidate the user picked</em> per exact gloss sequence and resurfaces it
-      ahead of fresh generation. A sequence can legitimately mean different things on different
-      occasions, so picking a different sentence later <em>adds</em> an option rather than
-      replacing the earlier one. Once a sequence has enough remembered options, the LLM isn't
-      called for it again.</p>
 
     <div class="note">
       <p>The practical effect: the slow path is a one-time cost per phrase. Repeat use of the same
@@ -498,9 +500,8 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:18px;justify-content:space-between}
     <div class="grid g2">
       <div class="card">
         <h3>Model size</h3>
-        <p>Q4_K_M at ~2.0 GB fits comfortably in the iQOO 15's RAM, so the demo bundles a 3B rather
-          than the 1.5B originally planned. llama.cpp runs it on ARM NEON/dotprod kernels with GPU
-          layer offload.</p>
+        <p>Q4_K_M at ~2 GB fits comfortably in the iQOO 15's RAM, so the demo uses a 3B rather
+          than the 1.5B originally planned, offloaded with <code>n_gpu_layers: 99</code>.</p>
       </div>
       <div class="card">
         <h3>ADPF hints</h3>
@@ -522,10 +523,12 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:18px;justify-content:space-between}
       </div>
     </div>
     <div class="note warn">
-      <p>Two things worth stating plainly: the LLM runs on CPU/GPU, <strong>not</strong> the
-        Hexagon NPU — llama.cpp has no QNN backend in this configuration. And OriginOS
-        performance-mode toggles aren't app-accessible APIs; ADPF is the supported route to the
-        same scheduler.</p>
+      <p>Stated plainly, because it is easy to overclaim: inference is configured with
+        <code>n_gpu_layers: 99</code> and the Android build ships llama.cpp's Hexagon HTP
+        libraries, but whether the HTP backend actually engages depends on the
+        <code>llama.rn</code> build and the device — so treat NPU offload as
+        available-but-unverified, not a measured win. OriginOS performance-mode toggles aren't
+        app-accessible APIs either; ADPF is the supported route to the same scheduler.</p>
     </div>
   </div>
 </section>
@@ -572,33 +575,88 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:18px;justify-content:space-between}
   </div>
 </section>
 
-<section id="build">
+<section id="setup">
   <div class="wrap">
-    <h2>Repository</h2>
+    <h2>Run it yourself</h2>
+    <p class="sub">A physical Android device is required — the camera path can't be demoed on an
+      emulator.</p>
+
+    <div class="grid g3">
+      <div class="card">
+        <span class="n">NEED</span>
+        <h3>Toolchain</h3>
+        <p>Node 18+, JDK 17, Android SDK 35, NDK 26.1.10909125, a device on Android 7.0+ with USB
+          debugging.</p>
+      </div>
+      <div class="card">
+        <span class="n">SHIPPED</span>
+        <h3>Two of three models</h3>
+        <p>The hand landmarker and Whisper tiny are committed to the repo. Only the ~2 GB
+          <code>.gguf</code> has to be fetched.</p>
+      </div>
+      <div class="card">
+        <span class="n">GRANT</span>
+        <h3>Camera + mic</h3>
+        <p>Signing needs the camera, the receive side needs the mic. Nothing is recorded or
+          uploaded either way.</p>
+      </div>
+    </div>
+
+<pre><code>git clone https://github.com/xreedev/mudra.git
+cd mudra/app
+npm install
+
+# one-time: the LLM weights (Qwen2.5-3B-Instruct Q4_K_M, from Hugging Face)
+adb shell mkdir -p /sdcard/Android/data/com.mudraapp/files/models
+adb push qwen2.5-3b-instruct-q4_k_m.gguf /sdcard/Android/data/com.mudraapp/files/models/
+
+npm start          # Metro
+npm run android    # build + install</code></pre>
+
+    <p>For a release APK the model is bundled instead of pushed — drop it into
+      <code>android/app/src/main/assets/models/</code> and the app extracts it on first launch.
+      On Windows, <code>scripts/build-release-with-llm.ps1</code> automates that, plus the
+      <code>MAX_PATH</code> and asset-compression workarounds a multi-GB asset needs.</p>
+
+    <h3>Then try the loop</h3>
+    <ol>
+      <li><strong>Add custom sign</strong> — hold a sign inside the guide circle until the ring
+        completes, name it, save. Usable on the next frame.</li>
+      <li><strong>Call</strong> — hold signs to build a gloss sequence, pick one of the proposed
+        sentences, it's spoken.</li>
+      <li><strong>Memory</strong> — the sentence you picked comes back next time those signs do.</li>
+    </ol>
+
+    <h3>Two-phone relay, optional</h3>
+    <p>Both phones on the same Wi-Fi: one opens <strong>Call</strong>, the other
+      <strong>Receive</strong>. Discovery is zeroconf/mDNS (<code>aslrelay</code>), the session runs
+      over TCP on port 12345. Guest networks with client isolation block it — a phone hotspot is the
+      reliable fallback. Without a relay it still works on one phone, over speakerphone.</p>
+
+    <h3>The standalone modules</h3>
+    <p>Each builds and tests on a laptop — no emulator, no device, no network:</p>
+<pre><code>cd memory-layer     &amp;&amp; ./gradlew :core:test   # Kotlin engine, no Android SDK needed
+cd memory-layer-rn  &amp;&amp; npm install &amp;&amp; npm test
+cd sign-embeddings  &amp;&amp; npm install &amp;&amp; npm test</code></pre>
+
     <div class="tw">
       <table>
         <thead><tr><th>Path</th><th>Contents</th></tr></thead>
         <tbody>
-          <tr><td><code>app/</code></td><td>React Native app — camera, recognition, LLM, memory, relay, five screens</td></tr>
+          <tr><td><code>app/</code></td><td>The React Native app — camera, recognition, LLM, speech, relay, five screens</td></tr>
           <tr><td><code>app/src/recognition/</code></td><td>Matcher, capture gate, duplicate detection, user gesture store, live-hand hooks</td></tr>
           <tr><td><code>app/src/llm/</code></td><td>Provider interface, llama.rn provider, prompts, sentence memory</td></tr>
+          <tr><td><code>app/src/speech/</code></td><td>TTS, voice recorder, Whisper transcriber</td></tr>
           <tr><td><code>app/src/relay/</code></td><td>zeroconf discovery, TCP sender/receiver</td></tr>
-          <tr><td><code>memory-layer/</code></td><td>Kotlin/Android translation memory — Room + ADPF, standalone Gradle build</td></tr>
-          <tr><td><code>memory-layer-rn/</code></td><td>TypeScript port, zero runtime dependencies</td></tr>
+          <tr><td><code>app/android/.../recognition/</code></td><td>Native MediaPipe frame-processor plugin</td></tr>
+          <tr><td><code>memory-layer/</code>, <code>memory-layer-rn/</code></td><td>The translation-memory engine, Kotlin and TypeScript</td></tr>
           <tr><td><code>sign-embeddings/</code></td><td>TFLite-embedding custom-sign path (built, not wired in)</td></tr>
           <tr><td><code>llm-testbed/</code></td><td>Standalone app for benchmarking GGUFs on the device</td></tr>
         </tbody>
       </table>
     </div>
 
-<pre><code># app
-cd app &amp;&amp; npm install &amp;&amp; npm run android
-
-# engines — no emulator, no device, no network
-cd memory-layer     &amp;&amp; ./gradlew :core:test
-cd memory-layer-rn  &amp;&amp; npm install &amp;&amp; npm test
-cd sign-embeddings  &amp;&amp; npm install &amp;&amp; npm test</code></pre>
-    <p>Full technical detail — algorithms, data structures, failure behaviour, build flow — is in
+    <p>Full setup, troubleshooting and the technical detail behind every claim on this page is in
       the <a href="https://github.com/xreedev/mudra#readme">README</a>.</p>
   </div>
 </section>
