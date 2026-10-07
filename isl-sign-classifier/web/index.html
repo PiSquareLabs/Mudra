@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ISL Sign Classifier</title>
+<meta name="description" content="Train a small Indian Sign Language sign classifier from MediaPipe landmarks and export it to TFLite for a Flutter Android app.">
+<meta name="theme-color" content="#0d9488">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<style>
+:root{--bg:#fff;--surface:#f6f7f9;--border:#e3e6eb;--text:#0b0c0e;--muted:#5c6470;--accent:#0d9488;--soft:#ecfdf9;--bad:#b91c1c;--ok:#047857;
+--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;--sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,system-ui,sans-serif}
+@media(prefers-color-scheme:dark){:root{--bg:#0b0c0e;--surface:#14161a;--border:#262a31;--text:#f2f4f7;--muted:#9ba1ac;--accent:#14b8a6;--soft:rgba(20,184,166,.12);--bad:#f87171;--ok:#34d399}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 var(--sans);-webkit-font-smoothing:antialiased}
+.wrap{max-width:860px;margin:0 auto;padding:0 max(16px,env(safe-area-inset-left))}
+a{color:var(--accent)}
+h1,h2{line-height:1.2;letter-spacing:-.02em;margin:0}
+h1{font-size:clamp(32px,6vw,52px)}
+h2{font-size:clamp(22px,3.4vw,28px);margin-bottom:10px}
+section{padding:40px 0;border-top:1px solid var(--border)}
+header{padding:56px 0 40px}
+.eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);background:var(--soft);border-radius:999px;padding:5px 12px;margin-bottom:18px}
+.lede{color:var(--muted);font-size:18px;max-width:60ch;margin:16px 0 0}
+.btn{display:inline-block;font:600 15px var(--sans);background:var(--accent);color:#fff;border:0;border-radius:10px;padding:11px 18px;text-decoration:none;cursor:pointer}
+.btn.alt{background:var(--soft);color:var(--accent)}
+.row{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px}
+.card b{display:block;margin-bottom:4px}
+.card span{color:var(--muted);font-size:14.5px}
+code{font-family:var(--mono);font-size:.88em;background:var(--surface);border:1px solid var(--border);border-radius:5px;padding:1px 5px}
+pre{position:relative;font:13px/1.55 var(--mono);background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;overflow-x:auto;margin:0 0 16px}
+pre .copy{position:absolute;top:8px;right:8px;font:12px var(--sans);background:var(--bg);color:var(--text);border:1px solid var(--border);border-radius:6px;padding:3px 8px;cursor:pointer}
+table{border-collapse:collapse;width:100%;font-size:14.5px;display:block;overflow-x:auto}
+th,td{text-align:left;padding:8px 12px;border-bottom:1px solid var(--border);white-space:nowrap}
+textarea{width:100%;min-height:110px;font:12.5px var(--mono);background:var(--surface);color:var(--text);border:1px solid var(--border);border-radius:10px;padding:10px}
+#result{margin-top:10px;font-size:14.5px}#result.ok{color:var(--ok)}#result.bad{color:var(--bad)}
+footer{padding:32px 0 48px;color:var(--muted);font-size:14px;border-top:1px solid var(--border)}
+</style>
+</head>
+<body>
+<header class="wrap">
+  <span class="eyebrow">ISL · INCLUDE · TFLite</span>
+  <h1>ISL sign classifier</h1>
+  <p class="lede">Train a small Indian Sign Language word classifier from MediaPipe landmarks, then ship it to a Flutter Android app as a single TFLite file. All preprocessing lives inside the model, so the app only sends raw landmarks.</p>
+  <div class="row">
+    <a class="btn" href="#quickstart">Quick start</a>
+    <a class="btn alt" href="#input">App input format</a>
+    <button class="btn alt" id="install" hidden>Install app</button>
+  </div>
+</header>
+
+<main class="wrap">
+<section id="pipeline">
+  <h2>Pipeline</h2>
+  <div class="grid">
+    <div class="card"><b>1 · Extract</b><span><code>extract_landmarks.py</code> — videos to <code>(frames, 61, 2)</code> arrays with MediaPipe Tasks (pose + hands).</span></div>
+    <div class="card"><b>2 · Train</b><span><code>train.py</code> — signer-split training of a ~1 M parameter causal depthwise-conv network.</span></div>
+    <div class="card"><b>3 · Export</b><span><code>export_tflite.py</code> — float16 and INT8 files, verified against Keras.</span></div>
+    <div class="card"><b>4 · Try</b><span><code>live_demo.py</code> — webcam test on your laptop using the <code>.tflite</code> file.</span></div>
+  </div>
+</section>
+
+<section id="quickstart">
+  <h2>Quick start</h2>
+  <pre data-copy>pip install -r requirements.txt
+pytest
+
+python extract_landmarks.py /path/to/INCLUDE --out out --signer-regex "(?i)(?:user|signer)[_ ]?(\d+)"
+python train.py --data out
+python export_tflite.py --model out/model.keras
+python live_demo.py --model out/model_fp16.tflite --labels out/labels.json</pre>
+  <p>Full instructions, including how to download INCLUDE, are in the project README.</p>
+</section>
+
+<section id="input">
+  <h2>Android app input</h2>
+  <p>One TFLite input tensor, float32, shape <code>[1, 32, 61, 2]</code>: 32 frames, 61 points, x/y in 0–1 image coordinates. Use <code>NaN</code> for missing points. Output is a softmax over the labels in <code>labels.json</code>.</p>
+  <table>
+    <tr><th>Rows</th><th>Content</th></tr>
+    <tr><td>0–18</td><td>Pose indices 0–16, 23, 24</td></tr>
+    <tr><td>19–39</td><td>Person's LEFT hand (21 points)</td></tr>
+    <tr><td>40–60</td><td>Person's RIGHT hand (21 points)</td></tr>
+  </table>
+  <h2 style="margin-top:28px">Check a clip</h2>
+  <p style="color:var(--muted);font-size:14.5px">Paste a JSON array <code>[32][61][2]</code> (use <code>null</code> for missing points). Nothing leaves your device.</p>
+  <textarea id="json" spellcheck="false" aria-label="Clip JSON"></textarea>
+  <div class="row" style="margin-top:10px"><button class="btn" id="check">Check</button><button class="btn alt" id="sample">Fill sample</button></div>
+  <div id="result" role="status"></div>
+</section>
+</main>
+
+<footer class="wrap">Part of <a href="../">MUDRA+</a>. This page works offline once installed.</footer>
+<script src="app.js"></script>
+</body>
+</html>
