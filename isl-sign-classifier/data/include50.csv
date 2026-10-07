@@ -1,0 +1,959 @@
+video_path,label,split
+Places/23. Court/MVI_3612.MOV,court,train
+Greetings/48. Hello/MVI_0089.MOV,hello,train
+Animals/4. Bird/MVI_3040.MOV,bird,train
+Adjectives/94. good/MVI_9269.MOV,good,train
+Electronics/54. Cell phone/MVI_9100.MOV,cell phone,train
+Home/28. Window/MVI_4364.MOV,window,train
+Adjectives/87. hot/MVI_5137.MOV,hot,train
+Days_and_Time/67. Monday/MVI_5009.MOV,monday,train
+Places/28. Store or Shop/MVI_3310.MOV,store or shop,train
+Means_of_Transportation/16. train ticket/MVI_3134.MOV,train ticket,train
+Places/35. Bank/MVI_3582.MOV,bank,train
+Greetings/48. Hello/MVI_9955.MOV,hello,train
+People/66. Brother/MVI_8631.MOV,brother,train
+People/77. Boy/MVI_5285.MOV,boy,train
+Adjectives/97. dry/MVI_9523.MOV,dry,train
+Greetings/48. Hello/MVI_9984.MOV,hello,train
+Jobs/84. Teacher/MVI_4744.MOV,teacher,train
+Means_of_Transportation/11. Car/MVI_4177.MOV,car,train
+Adjectives/3. happy/MVI_9455.MOV,happy,train
+Colours/47. Red/MVI_4018.MOV,red,train
+Days_and_Time/86. Time/MVI_4667.MOV,time,train
+Clothes/42. T-Shirt/MVI_3850.MOV,t-shirt,train
+Clothes/44. Shoes/MVI_4009.MOV,shoes,train
+Places/23. Court/MVI_3366.MOV,court,train
+Colours/55. White/MVI_5061.MOV,white,train
+Places/19. House/MVI_3351.MOV,house,train
+Seasons/61. Summer/MVI_4567.MOV,summer,train
+Colours/47. Red/MVI_4899.MOV,red,train
+People/77. Boy/MVI_3814.MOV,boy,train
+Colours/55. White/MVI_4923.MOV,white,train
+Greetings/51. Good Morning/MVI_0047.MOV,good morning,train
+Home/40. Paint/MVI_4414.MOV,paint,train
+Places/19. House/MVI_3352.MOV,house,train
+Clothes/37. Hat/MVI_3688.MOV,hat,train
+Adjectives/84. small little/MVI_9398.MOV,small little,train
+Seasons/64. Fall/MVI_5436.MOV,fall,train
+Adjectives/78. long/MVI_9299.MOV,long,train
+Adjectives/79. short/MVI_5189.MOV,short,train
+Society/2. Death/MVI_4258.MOV,death,train
+Adjectives/84. small little/MVI_5126.MOV,small little,train
+Home/40. Paint/MVI_8818.MOV,paint,train
+People/66. Brother/MVI_5096.MOV,brother,train
+Adjectives/91. new/MVI_5308.MOV,new,train
+People/77. Boy/MVI_4109.MOV,boy,train
+Pronouns/44. it/MVI_0013.MOV,it,train
+Seasons/61. Summer/MVI_5424.MOV,summer,train
+Pronouns/40. I/MVI_0013.MOV,i,train
+Pronouns/46. you (plural)/MVI_0022.MOV,you (plural),train
+Animals/4. Bird/MVI_8567.MOV,bird,train
+Jobs/84. Teacher/MVI_8866.MOV,teacher,train
+Colours/47. Red/MVI_5185.MOV,red,train
+Places/19. House/MVI_3268.MOV,house,train
+Home/34. Pen/MVI_8794.MOV,pen,train
+Adjectives/3. happy/MVI_5341.MOV,happy,train
+Pronouns/40. I/MVI_0001.MOV,i,train
+Animals/1. Dog/MVI_3003.MOV,dog,train
+Society/2. Death/MVI_8930.MOV,death,train
+Animals/4. Bird/MVI_2989.MOV,bird,train
+People/66. Brother/MVI_4076.MOV,brother,train
+Home/28. Window/MVI_4362.MOV,window,train
+People/78. Girl/MVI_3818.MOV,girl,train
+Places/19. House/MVI_3270.MOV,house,train
+Greetings/51. Good Morning/MVI_0043.MOV,good morning,train
+Means_of_Transportation/11. Car/MVI_3209.MOV,car,train
+Society/14. Election/MVI_8969.MOV,election,train
+People/77. Boy/MVI_3816.MOV,boy,train
+Means_of_Transportation/16. train ticket/MVI_3196.MOV,train ticket,train
+Greetings/55. Thank you/MVI_0062.MOV,thank you,train
+Clothes/37. Hat/MVI_4197.MOV,hat,train
+Greetings/51. Good Morning/MVI_0098.MOV,good morning,train
+Society/14. Election/MVI_8712.MOV,election,train
+Means_of_Transportation/16. train ticket/MVI_3224.MOV,train ticket,train
+Adjectives/83. big large/MVI_5123.MOV,big large,train
+Places/28. Store or Shop/MVI_3553.MOV,store or shop,train
+Places/28. Store or Shop/MVI_3635.MOV,store or shop,train
+Home/28. Window/MVI_9014.MOV,window,train
+Adjectives/91. new/MVI_9500.MOV,new,train
+Jobs/84. Teacher/MVI_8864.MOV,teacher,train
+Places/35. Bank/MVI_3501.MOV,bank,train
+People/77. Boy/MVI_4110.MOV,boy,train
+Animals/4. Bird/MVI_3072.MOV,bird,train
+Places/23. Court/MVI_3455.MOV,court,train
+People/66. Brother/MVI_4957.MOV,brother,train
+Adjectives/3. happy/MVI_5343.MOV,happy,train
+Adjectives/78. long/MVI_9458.MOV,long,train
+Adjectives/79. short/MVI_9461.MOV,short,train
+Places/23. Court/MVI_3534.MOV,court,train
+Adjectives/2. quiet/MVI_9453.MOV,quiet,train
+Adjectives/1. loud/MVI_9368.MOV,loud,train
+Animals/5. Cow/MVI_3015.MOV,cow,train
+Animals/1. Dog/MVI_2979.MOV,dog,train
+Adjectives/94. good/MVI_9510.MOV,good,train
+Pronouns/46. you (plural)/MVI_9947.MOV,you (plural),train
+Greetings/55. Thank you/MVI_9986.MOV,thank you,train
+People/61. Father/MVI_4223.MOV,father,train
+People/78. Girl/MVI_4113.MOV,girl,train
+Greetings/55. Thank you/MVI_0007.MOV,thank you,train
+Pronouns/46. you (plural)/MVI_0082.MOV,you (plural),train
+Colours/55. White/MVI_3743.MOV,white,train
+Adjectives/97. dry/MVI_9522.MOV,dry,train
+Clothes/44. Shoes/MVI_4887.MOV,shoes,train
+Clothes/42. T-Shirt/MVI_4003.MOV,t-shirt,train
+Jobs/91. Priest/MVI_4488.MOV,priest,train
+Home/40. Paint/MVI_4928.MOV,paint,train
+Home/34. Pen/MVI_4389.MOV,pen,train
+Adjectives/1. loud/MVI_9370.MOV,loud,train
+Adjectives/91. new/MVI_5148.MOV,new,train
+Adjectives/1. loud/MVI_5179.MOV,loud,train
+Animals/4. Bird/MVI_3094.MOV,bird,train
+Greetings/51. Good Morning/MVI_9932.MOV,good morning,train
+Adjectives/84. small little/MVI_5128.MOV,small little,train
+Home/28. Window/MVI_4881.MOV,window,train
+Electronics/53. Fan/MVI_4965.MOV,fan,train
+Adjectives/97. dry/MVI_9521.MOV,dry,train
+Adjectives/3. happy/MVI_5265.MOV,happy,train
+Places/23. Court/MVI_3531.MOV,court,train
+Adjectives/3. happy/MVI_5342.MOV,happy,train
+Adjectives/1. loud/MVI_9450.MOV,loud,train
+Adjectives/84. small little/MVI_5288.MOV,small little,train
+Colours/47. Red/MVI_5038.MOV,red,train
+Colours/47. Red/MVI_3867.MOV,red,train
+Means_of_Transportation/16. train ticket/MVI_3254.MOV,train ticket,train
+Days_and_Time/67. Monday/MVI_5011.MOV,monday,train
+Adjectives/83. big large/MVI_9476.MOV,big large,train
+Clothes/42. T-Shirt/MVI_5021.MOV,t-shirt,train
+Society/14. Election/MVI_4840.MOV,election,train
+Adjectives/79. short/MVI_9382.MOV,short,train
+Places/28. Store or Shop/MVI_3308.MOV,store or shop,train
+Days_and_Time/78. Year/MVI_5048.MOV,year,train
+Greetings/55. Thank you/MVI_9949.MOV,thank you,train
+People/61. Father/MVI_3765.MOV,father,train
+Greetings/48. Hello/MVI_9916.MOV,hello,train
+Pronouns/46. you (plural)/MVI_0083.MOV,you (plural),train
+Colours/55. White/MVI_5062.MOV,white,train
+Places/23. Court/MVI_3610.MOV,court,train
+Means_of_Transportation/11. Car/MVI_3175.MOV,car,train
+Adjectives/94. good/MVI_9270.MOV,good,train
+Society/14. Election/MVI_4305.MOV,election,train
+Places/19. House/MVI_3437.MOV,house,train
+Seasons/64. Fall/MVI_4580.MOV,fall,train
+Animals/1. Dog/MVI_3030.MOV,dog,train
+Adjectives/78. long/MVI_5188.MOV,long,train
+Days_and_Time/86. Time/MVI_4670.MOV,time,train
+Colours/47. Red/MVI_4207.MOV,red,train
+People/61. Father/MVI_3912.MOV,father,train
+Home/34. Pen/MVI_9033.MOV,pen,train
+People/61. Father/MVI_4062.MOV,father,train
+Means_of_Transportation/16. train ticket/MVI_3164.MOV,train ticket,train
+Greetings/48. Hello/MVI_0037.MOV,hello,train
+Pronouns/46. you (plural)/MVI_9946.MOV,you (plural),train
+Home/40. Paint/MVI_4926.MOV,paint,train
+People/61. Father/MVI_3763.MOV,father,train
+Adjectives/78. long/MVI_9378.MOV,long,train
+Greetings/48. Hello/MVI_9954.MOV,hello,train
+Pronouns/40. I/MVI_9881.MOV,i,train
+Jobs/91. Priest/MVI_5345.MOV,priest,train
+Seasons/64. Fall/MVI_9134.MOV,fall,train
+Places/19. House/MVI_3516.MOV,house,train
+Animals/4. Bird/MVI_3071.MOV,bird,train
+People/78. Girl/MVI_4114.MOV,girl,train
+People/61. Father/MVI_5081.MOV,father,train
+Adjectives/1. loud/MVI_5336.MOV,loud,train
+Places/35. Bank/MVI_3500.MOV,bank,train
+Home/28. Window/MVI_8769.MOV,window,train
+Places/23. Court/MVI_3370.MOV,court,train
+Days_and_Time/78. Year/MVI_9176.MOV,year,train
+Colours/54. Black/MVI_5058.MOV,black,train
+Clothes/42. T-Shirt/MVI_8606.MOV,t-shirt,train
+People/61. Father/MVI_5227.MOV,father,train
+Seasons/61. Summer/MVI_4990.MOV,summer,train
+Places/28. Store or Shop/MVI_3474.MOV,store or shop,train
+Adjectives/94. good/MVI_9512.MOV,good,train
+Jobs/91. Priest/MVI_4490.MOV,priest,train
+Animals/1. Dog/MVI_3059.MOV,dog,train
+People/66. Brother/MVI_5095.MOV,brother,train
+Jobs/91. Priest/MVI_5342.MOV,priest,train
+Means_of_Transportation/11. Car/MVI_3210.MOV,car,train
+Electronics/53. Fan/MVI_4536.MOV,fan,train
+Pronouns/40. I/MVI_9959.MOV,i,train
+Society/2. Death/MVI_4257.MOV,death,train
+Means_of_Transportation/11. Car/MVI_3117.MOV,car,train
+Colours/47. Red/MVI_3721.MOV,red,train
+People/78. Girl/MVI_3817.MOV,girl,train
+Seasons/64. Fall/MVI_5001.MOV,fall,train
+Adjectives/78. long/MVI_9460.MOV,long,train
+Places/35. Bank/MVI_3502.MOV,bank,train
+Days_and_Time/78. Year/MVI_5491.MOV,year,train
+Means_of_Transportation/16. train ticket/MVI_8596.MOV,train ticket,train
+Colours/55. White/MVI_3745.MOV,white,train
+Adjectives/79. short/MVI_9380.MOV,short,train
+Adjectives/2. quiet/MVI_9451.MOV,quiet,train
+Places/23. Court/MVI_3452.MOV,court,train
+Adjectives/83. big large/MVI_9316.MOV,big large,train
+Society/14. Election/MVI_4304.MOV,election,train
+Places/19. House/MVI_3350.MOV,house,train
+Animals/4. Bird/MVI_3037.MOV,bird,train
+Home/28. Window/MVI_8767.MOV,window,train
+Adjectives/79. short/MVI_9221.MOV,short,train
+Days_and_Time/67. Monday/MVI_5446.MOV,monday,train
+People/66. Brother/MVI_5244.MOV,brother,train
+People/66. Brother/MVI_3781.MOV,brother,train
+Places/28. Store or Shop/Extra/MVI_3636.MOV,store or shop,train
+Adjectives/83. big large/MVI_5204.MOV,big large,train
+Places/35. Bank/Extra/MVI_3339.MOV,bank,train
+Clothes/44. Shoes/MVI_5028.MOV,shoes,train
+Adjectives/3. happy/MVI_9540.MOV,happy,train
+Days_and_Time/78. Year/MVI_5492.MOV,year,train
+Means_of_Transportation/16. train ticket/MVI_3162.MOV,train ticket,train
+Animals/1. Dog/MVI_3002.MOV,dog,train
+Jobs/84. Teacher/MVI_5310.MOV,teacher,train
+Society/2. Death/MVI_8661.MOV,death,train
+Seasons/64. Fall/MVI_4579.MOV,fall,train
+Pronouns/46. you (plural)/MVI_0023.MOV,you (plural),train
+Days_and_Time/67. Monday/MVI_5010.MOV,monday,train
+Means_of_Transportation/11. Car/MVI_4178.MOV,car,train
+Electronics/54. Cell phone/MVI_5391.MOV,cell phone,train
+Days_and_Time/86. Time/MVI_9203.MOV,time,train
+Jobs/91. Priest/MVI_5343.MOV,priest,train
+People/66. Brother/MVI_4230.MOV,brother,train
+People/61. Father/MVI_3910.MOV,father,train
+Means_of_Transportation/11. Car/MVI_3147.MOV,car,train
+Pronouns/46. you (plural)/MVI_9908.MOV,you (plural),train
+Colours/55. White/MVI_4922.MOV,white,train
+Adjectives/78. long/MVI_5266.MOV,long,train
+Clothes/37. Hat/MVI_5008.MOV,hat,train
+People/78. Girl/MVI_5288.MOV,girl,train
+Colours/55. White/MVI_3891.MOV,white,train
+Pronouns/44. it/MVI_9938.MOV,it,train
+People/66. Brother/MVI_3928.MOV,brother,train
+Colours/47. Red/MVI_8612.MOV,red,train
+Means_of_Transportation/11. Car/MVI_3146.MOV,car,train
+Home/40. Paint/MVI_8819.MOV,paint,train
+Pronouns/40. I/MVI_0002.MOV,i,train
+Animals/5. Cow/MVI_3075.MOV,cow,train
+Electronics/53. Fan/MVI_9097.MOV,fan,train
+Animals/5. Cow/MVI_4160.MOV,cow,train
+Adjectives/1. loud/MVI_9449.MOV,loud,train
+Adjectives/84. small little/MVI_9478.MOV,small little,train
+Colours/55. White/MVI_4043.MOV,white,train
+Greetings/48. Hello/MVI_9956.MOV,hello,train
+Colours/54. Black/MVI_5206.MOV,black,train
+Animals/5. Cow/MVI_2991.MOV,cow,train
+Colours/55. White/MVI_3892.MOV,white,train
+People/66. Brother/MVI_4956.MOV,brother,train
+Clothes/37. Hat/MVI_5007.MOV,hat,train
+Animals/4. Bird/MVI_2987.MOV,bird,train
+Animals/5. Cow/MVI_3049.MOV,cow,train
+Adjectives/78. long/MVI_9298.MOV,long,train
+Adjectives/78. long/MVI_5108.MOV,long,train
+Adjectives/83. big large/MVI_9317.MOV,big large,train
+Greetings/51. Good Morning/MVI_0045.MOV,good morning,train
+Animals/4. Bird/Extra/MVI_3043.MOV,bird,train
+Clothes/44. Shoes/MVI_5175.MOV,shoes,train
+Animals/4. Bird/MVI_3038.MOV,bird,train
+Adjectives/79. short/MVI_5110.MOV,short,train
+Adjectives/78. long/MVI_9218.MOV,long,train
+Colours/54. Black/MVI_3889.MOV,black,train
+People/61. Father/MVI_3764.MOV,father,train
+Adjectives/97. dry/MVI_9441.MOV,dry,train
+Electronics/54. Cell phone/MVI_4538.MOV,cell phone,train
+Adjectives/91. new/MVI_5309.MOV,new,train
+Clothes/42. T-Shirt/MVI_4002.MOV,t-shirt,train
+People/77. Boy/MVI_4242.MOV,boy,train
+Adjectives/94. good/MVI_5240.MOV,good,train
+Adjectives/3. happy/MVI_5184.MOV,happy,train
+Adjectives/3. happy/MVI_9541.MOV,happy,train
+Adjectives/91. new/MVI_5229.MOV,new,train
+Home/34. Pen/MVI_8791.MOV,pen,train
+Jobs/91. Priest/MVI_4486.MOV,priest,train
+Adjectives/97. dry/MVI_5167.MOV,dry,train
+Colours/47. Red/MVI_5039.MOV,red,train
+Adjectives/83. big large/MVI_5284.MOV,big large,train
+Greetings/55. Thank you/MVI_0061.MOV,thank you,train
+People/77. Boy/MVI_4112.MOV,boy,train
+Home/34. Pen/MVI_4387.MOV,pen,train
+Jobs/91. Priest/MVI_4771.MOV,priest,train
+Clothes/44. Shoes/MVI_4888.MOV,shoes,train
+Clothes/37. Hat/MVI_3985.MOV,hat,train
+Home/40. Paint/MVI_4413.MOV,paint,train
+Society/14. Election/MVI_8713.MOV,election,train
+Jobs/84. Teacher/MVI_4459.MOV,teacher,train
+Means_of_Transportation/16. train ticket/MVI_3194.MOV,train ticket,train
+Society/14. Election/MVI_4839.MOV,election,train
+Days_and_Time/86. Time/MVI_5524.MOV,time,train
+Adjectives/97. dry/MVI_9440.MOV,dry,train
+Adjectives/91. new/MVI_9342.MOV,new,train
+Adjectives/91. new/MVI_9422.MOV,new,train
+Adjectives/83. big large/MVI_9477.MOV,big large,train
+Adjectives/84. small little/extra/MVI_5209.MOV,small little,train
+People/61. Father/MVI_4060.MOV,father,train
+Days_and_Time/67. Monday/MVI_9144.MOV,monday,train
+Pronouns/46. you (plural)/MVI_9975.MOV,you (plural),train
+Society/14. Election/MVI_8711.MOV,election,train
+Adjectives/2. quiet/MVI_9538.MOV,quiet,train
+Home/40. Paint/MVI_4412.MOV,paint,train
+Days_and_Time/86. Time/MVI_4668.MOV,time,train
+Colours/54. Black/MVI_3887.MOV,black,train
+Adjectives/78. long/MVI_9217.MOV,long,train
+Clothes/44. Shoes/MVI_4204.MOV,shoes,train
+Adjectives/84. small little/MVI_9400.MOV,small little,train
+Clothes/44. Shoes/MVI_3710.MOV,shoes,train
+Pronouns/46. you (plural)/MVI_0030.MOV,you (plural),train
+Greetings/55. Thank you/MVI_9950.MOV,thank you,train
+Pronouns/44. it/MVI_0014.MOV,it,train
+Adjectives/97. dry/MVI_5249.MOV,dry,train
+Colours/47. Red/MVI_3720.MOV,red,train
+Electronics/53. Fan/MVI_5390.MOV,fan,train
+Adjectives/91. new/MVI_9340.MOV,new,train
+People/77. Boy/MVI_4981.MOV,boy,train
+Clothes/37. Hat/MVI_5006.MOV,hat,train
+Adjectives/84. small little/MVI_9480.MOV,small little,train
+Colours/55. White/MVI_4921.MOV,white,train
+Places/19. House/MVI_3515.MOV,house,train
+Adjectives/84. small little/MVI_9236.MOV,small little,train
+Animals/1. Dog/MVI_3028.MOV,dog,train
+Home/34. Pen/MVI_4908.MOV,pen,train
+Colours/47. Red/MVI_3719.MOV,red,train
+Electronics/54. Cell phone/MVI_4539.MOV,cell phone,train
+Greetings/48. Hello/MVI_9914.MOV,hello,train
+Adjectives/79. short/MVI_5270.MOV,short,train
+Pronouns/44. it/MVI_0078.MOV,it,train
+Pronouns/40. I/MVI_9958.MOV,i,train
+Places/19. House/MVI_3595.MOV,house,train
+Jobs/84. Teacher/MVI_5311.MOV,teacher,train
+Adjectives/91. new/MVI_9421.MOV,new,train
+Adjectives/83. big large/MVI_9394.MOV,big large,train
+People/61. Father/MVI_4942.MOV,father,train
+Colours/54. Black/MVI_4919.MOV,black,train
+People/78. Girl/MVI_5289.MOV,girl,train
+Adjectives/91. new/MVI_9260.MOV,new,train
+Adjectives/87. hot/MVI_9328.MOV,hot,train
+Means_of_Transportation/11. Car/MVI_3211.MOV,car,train
+Electronics/54. Cell phone/MVI_9102.MOV,cell phone,train
+Clothes/42. T-Shirt/MVI_3706.MOV,t-shirt,train
+Adjectives/83. big large/MVI_9234.MOV,big large,train
+Pronouns/40. I/MVI_9918.MOV,i,train
+Seasons/64. Fall/MVI_4999.MOV,fall,train
+Pronouns/44. it/MVI_9898.MOV,it,train
+Greetings/51. Good Morning/MVI_9968.MOV,good morning,train
+Days_and_Time/86. Time/MVI_9202.MOV,time,train
+Adjectives/97. dry/MVI_5326.MOV,dry,train
+Greetings/51. Good Morning/MVI_0046.MOV,good morning,train
+People/77. Boy/MVI_3964.MOV,boy,train
+Colours/47. Red/MVI_4019.MOV,red,train
+Greetings/51. Good Morning/MVI_9934.MOV,good morning,train
+Adjectives/97. dry/MVI_9279.MOV,dry,train
+Places/23. Court/MVI_3367.MOV,court,train
+Places/28. Store or Shop/MVI_3387.MOV,store or shop,train
+Adjectives/1. loud/MVI_9291.MOV,loud,train
+Animals/5. Cow/MVI_3046.MOV,cow,train
+Places/19. House/MVI_3349.MOV,house,train
+Adjectives/79. short/MVI_9463.MOV,short,train
+Adjectives/94. good/MVI_5238.MOV,good,train
+Adjectives/91. new/MVI_5307.MOV,new,train
+Days_and_Time/86. Time/MVI_5526.MOV,time,train
+Places/28. Store or Shop/MVI_3309.MOV,store or shop,train
+Places/35. Bank/MVI_3337.MOV,bank,train
+Clothes/37. Hat/MVI_3986.MOV,hat,train
+Adjectives/2. quiet/MVI_5260.MOV,quiet,train
+Days_and_Time/78. Year/MVI_5047.MOV,year,train
+Means_of_Transportation/16. train ticket/MVI_4191.MOV,train ticket,train
+People/78. Girl/MVI_4243.MOV,girl,train
+Adjectives/91. new/MVI_5151.MOV,new,train
+Colours/55. White/MVI_4044.MOV,white,train
+Places/19. House/MVI_3438.MOV,house,train
+Adjectives/97. dry/MVI_9277.MOV,dry,train
+People/78. Girl/MVI_5290.MOV,girl,train
+Animals/1. Dog/MVI_3061.MOV,dog,train
+Adjectives/84. small little/MVI_9479.MOV,small little,train
+Society/2. Death/MVI_4802.MOV,death,train
+Adjectives/79. short/MVI_5112.MOV,short,train
+Adjectives/2. quiet/MVI_9293.MOV,quiet,train
+Animals/5. Cow/MVI_3097.MOV,cow,train
+Places/35. Bank/MVI_3336.MOV,bank,train
+Electronics/53. Fan/MVI_9099.MOV,fan,train
+Seasons/61. Summer/MVI_4565.MOV,summer,train
+Greetings/48. Hello/MVI_0038.MOV,hello,train
+Clothes/42. T-Shirt/MVI_3705.MOV,t-shirt,train
+People/77. Boy/MVI_4982.MOV,boy,train
+Colours/47. Red/MVI_5184.MOV,red,train
+Colours/55. White/MVI_5209.MOV,white,train
+Animals/4. Bird/MVI_4157.MOV,bird,train
+Places/23. Court/MVI_3285.MOV,court,train
+Colours/55. White/MVI_8620.MOV,white,train
+Home/40. Paint/MVI_9051.MOV,paint,train
+Greetings/51. Good Morning/MVI_0048.MOV,good morning,train
+Adjectives/97. dry/MVI_5327.MOV,dry,train
+Clothes/42. T-Shirt/MVI_5022.MOV,t-shirt,train
+Days_and_Time/67. Monday/MVI_4591.MOV,monday,train
+Greetings/51. Good Morning/MVI_9935.MOV,good morning,train
+Adjectives/83. big large/MVI_5205.MOV,big large,train
+Greetings/48. Hello/MVI_9917.MOV,hello,train
+Clothes/44. Shoes/MVI_8608.MOV,shoes,train
+Electronics/53. Fan/MVI_4532.MOV,fan,train
+Places/28. Store or Shop/MVI_3385.MOV,store or shop,train
+Adjectives/87. hot/MVI_5136.MOV,hot,train
+Places/28. Store or Shop/MVI_3555.MOV,store or shop,train
+Jobs/84. Teacher/MVI_5312.MOV,teacher,train
+Clothes/42. T-Shirt/MVI_3851.MOV,t-shirt,train
+Animals/4. Bird/MVI_3096.MOV,bird,train
+Adjectives/1. loud/MVI_9535.MOV,loud,train
+Means_of_Transportation/16. train ticket/MVI_3133.MOV,train ticket,train
+Seasons/61. Summer/MVI_9124.MOV,summer,train
+Adjectives/91. new/MVI_9502.MOV,new,train
+Adjectives/2. quiet/MVI_9294.MOV,quiet,train
+Adjectives/87. hot/MVI_9488.MOV,hot,train
+Adjectives/91. new/MVI_9259.MOV,new,train
+Animals/5. Cow/MVI_3098.MOV,cow,train
+Colours/55. White/MVI_3890.MOV,white,train
+Means_of_Transportation/11. Car/MVI_8584.MOV,car,train
+People/66. Brother/MVI_5243.MOV,brother,train
+Days_and_Time/67. Monday/MVI_5449.MOV,monday,train
+People/66. Brother/MVI_4955.MOV,brother,train
+People/78. Girl/MVI_3965.MOV,girl,train
+Adjectives/2. quiet/MVI_5339.MOV,quiet,train
+People/61. Father/MVI_4940.MOV,father,train
+Pronouns/40. I/MVI_0012.MOV,i,train
+Places/23. Court/Extra/MVI_3368.MOV,court,train
+Clothes/37. Hat/MVI_3835.MOV,hat,train
+Seasons/61. Summer/MVI_9123.MOV,summer,train
+Places/35. Bank/MVI_3583.MOV,bank,train
+Home/40. Paint/MVI_4927.MOV,paint,train
+Adjectives/97. dry/MVI_9278.MOV,dry,train
+Adjectives/79. short/extra/MVI_5192.MOV,short,train
+Adjectives/94. good/MVI_9349.MOV,good,train
+Home/34. Pen/MVI_4390.MOV,pen,train
+Greetings/55. Thank you/MVI_0059.MOV,thank you,train
+Adjectives/1. loud/MVI_9448.MOV,loud,train
+Adjectives/2. quiet/MVI_9292.MOV,quiet,train
+Places/35. Bank/MVI_3422.MOV,bank,train
+Adjectives/83. big large/MVI_5124.MOV,big large,train
+Society/2. Death/MVI_8664.MOV,death,train
+Electronics/54. Cell phone/MVI_4540.MOV,cell phone,train
+Clothes/44. Shoes/MVI_5176.MOV,shoes,train
+Places/19. House/MVI_3435.MOV,house,train
+Colours/54. Black/MVI_4040.MOV,black,train
+Animals/5. Cow/MVI_8569.MOV,cow,train
+Colours/54. Black/MVI_4918.MOV,black,train
+Adjectives/2. quiet/MVI_9371.MOV,quiet,train
+Adjectives/1. loud/MVI_9290.MOV,loud,train
+People/61. Father/MVI_5228.MOV,father,train
+Places/28. Store or Shop/MVI_3632.MOV,store or shop,train
+Clothes/42. T-Shirt/MVI_4883.MOV,t-shirt,train
+Adjectives/87. hot/MVI_9249.MOV,hot,train
+Animals/5. Cow/MVI_8570.MOV,cow,train
+Animals/4. Bird/Extra/MVI_3042.MOV,bird,train
+Adjectives/97. dry/MVI_5169.MOV,dry,train
+Adjectives/2. quiet/MVI_5338.MOV,quiet,train
+Adjectives/3. happy/MVI_5185.MOV,happy,train
+Adjectives/87. hot/MVI_9247.MOV,hot,train
+Seasons/64. Fall/MVI_5434.MOV,fall,train
+Jobs/84. Teacher/MVI_8865.MOV,teacher,train
+Home/34. Pen/MVI_9032.MOV,pen,train
+People/78. Girl/MVI_8645.MOV,girl,train
+Places/23. Court/Extra/MVI_3613.MOV,court,train
+Seasons/61. Summer/MVI_4992.MOV,summer,train
+Adjectives/78. long/MVI_5186.MOV,long,train
+Colours/55. White/MVI_4216.MOV,white,train
+Pronouns/46. you (plural)/MVI_9909.MOV,you (plural),train
+Clothes/42. T-Shirt/MVI_4881.MOV,t-shirt,train
+Adjectives/87. hot/MVI_5138.MOV,hot,train
+Adjectives/78. long/MVI_9459.MOV,long,train
+Animals/1. Dog/MVI_4148.MOV,dog,train
+Greetings/55. Thank you/MVI_0058.MOV,thank you,train
+People/77. Boy/MVI_5133.MOV,boy,train
+Animals/5. Cow/MVI_3017.MOV,cow,train
+Greetings/51. Good Morning/MVI_9970.MOV,good morning,train
+Adjectives/2. quiet/MVI_5262.MOV,quiet,train
+Places/35. Bank/MVI_3664.MOV,bank,train
+People/66. Brother/MVI_3780.MOV,brother,train
+Clothes/37. Hat/MVI_4866.MOV,hat,train
+Society/14. Election/MVI_8968.MOV,election,train
+Pronouns/44. it/MVI_9897.MOV,it,train
+Places/23. Court/Extra/MVI_3288.MOV,court,train
+Colours/54. Black/MVI_5059.MOV,black,train
+Adjectives/84. small little/MVI_5207.MOV,small little,train
+Animals/1. Dog/MVI_3004.MOV,dog,train
+Electronics/54. Cell phone/MVI_5392.MOV,cell phone,train
+Jobs/91. Priest/MVI_4770.MOV,priest,train
+Clothes/44. Shoes/MVI_3711.MOV,shoes,train
+Pronouns/40. I/MVI_9995.MOV,i,train
+Jobs/84. Teacher/MVI_4458.MOV,teacher,train
+Electronics/53. Fan/MVI_9098.MOV,fan,train
+Seasons/61. Summer/MVI_5420.MOV,summer,train
+Places/23. Court/MVI_3533.MOV,court,train
+Society/14. Election/MVI_8710.MOV,election,train
+Electronics/53. Fan/MVI_4966.MOV,fan,train
+Seasons/64. Fall/MVI_9135.MOV,fall,train
+Greetings/55. Thank you/MVI_0008.MOV,thank you,train
+Pronouns/46. you (plural)/MVI_0021.MOV,you (plural),train
+Adjectives/78. long/MVI_5107.MOV,long,train
+Seasons/64. Fall/MVI_9133.MOV,fall,train
+Adjectives/79. short/MVI_9301.MOV,short,train
+Places/28. Store or Shop/MVI_3475.MOV,store or shop,train
+Days_and_Time/86. Time/MVI_5078.MOV,time,train
+Adjectives/91. new/MVI_5231.MOV,new,train
+Adjectives/97. dry/MVI_5168.MOV,dry,train
+Seasons/61. Summer/MVI_4566.MOV,summer,train
+Electronics/53. Fan/MVI_4533.MOV,fan,train
+Pronouns/46. you (plural)/MVI_0084.MOV,you (plural),train
+Society/2. Death/MVI_8662.MOV,death,train
+Colours/54. Black/MVI_3888.MOV,black,train
+Clothes/37. Hat/MVI_4867.MOV,hat,train
+Clothes/44. Shoes/MVI_5177.MOV,shoes,train
+Places/19. House/MVI_3513.MOV,house,train
+Days_and_Time/78. Year/MVI_9178.MOV,year,train
+Adjectives/94. good/MVI_9431.MOV,good,train
+Greetings/51. Good Morning/MVI_9991.MOV,good morning,train
+Clothes/44. Shoes/MVI_3857.MOV,shoes,train
+Animals/4. Bird/Extra/MVI_3044.MOV,bird,train
+Adjectives/94. good/MVI_5316.MOV,good,train
+Home/34. Pen/MVI_4388.MOV,pen,train
+Pronouns/40. I/MVI_0065.MOV,i,train
+Jobs/91. Priest/MVI_4487.MOV,priest,train
+People/66. Brother/MVI_4075.MOV,brother,train
+Adjectives/97. dry/MVI_5250.MOV,dry,train
+Means_of_Transportation/16. train ticket/MVI_3255.MOV,train ticket,train
+Pronouns/46. you (plural)/MVI_0031.MOV,you (plural),train
+Animals/4. Bird/MVI_3070.MOV,bird,train
+Places/35. Bank/MVI_3423.MOV,bank,train
+Home/40. Paint/MVI_9052.MOV,paint,train
+Colours/47. Red/MVI_3868.MOV,red,train
+Animals/4. Bird/Extra/MVI_3041.MOV,bird,train
+Seasons/61. Summer/MVI_5421.MOV,summer,train
+Places/28. Store or Shop/MVI_3473.MOV,store or shop,train
+Clothes/42. T-Shirt/MVI_4882.MOV,t-shirt,train
+Means_of_Transportation/11. Car/MVI_3239.MOV,car,train
+People/77. Boy/MVI_5286.MOV,boy,train
+Pronouns/40. I/MVI_9879.MOV,i,train
+Adjectives/3. happy/MVI_9375.MOV,happy,train
+Colours/54. Black/MVI_4215.MOV,black,train
+Adjectives/2. quiet/MVI_5181.MOV,quiet,train
+Adjectives/94. good/MVI_9268.MOV,good,train
+Clothes/37. Hat/MVI_3690.MOV,hat,train
+Clothes/42. T-Shirt/MVI_5170.MOV,t-shirt,train
+Adjectives/2. quiet/MVI_9373.MOV,quiet,train
+Adjectives/1. loud/MVI_5337.MOV,loud,train
+People/61. Father/MVI_5229.MOV,father,train
+Adjectives/94. good/MVI_5318.MOV,good,train
+Adjectives/94. good/MVI_9432.MOV,good,train
+Adjectives/97. dry/MVI_9439.MOV,dry,train
+Pronouns/44. it/MVI_0025.MOV,it,train
+Adjectives/94. good/MVI_9351.MOV,good,train
+People/78. Girl/MVI_3819.MOV,girl,train
+People/77. Boy/MVI_5132.MOV,boy,train
+Adjectives/3. happy/MVI_5264.MOV,happy,train
+Adjectives/84. small little/MVI_5287.MOV,small little,train
+People/78. Girl/MVI_4984.MOV,girl,train
+Animals/1. Dog/MVI_3060.MOV,dog,train
+Greetings/51. Good Morning/MVI_0100.MOV,good morning,train
+Days_and_Time/86. Time/MVI_5079.MOV,time,train
+Pronouns/40. I/MVI_0066.MOV,i,train
+Colours/55. White/MVI_4042.MOV,white,train
+Animals/4. Bird/MVI_3095.MOV,bird,train
+Places/19. House/MVI_3436.MOV,house,train
+Clothes/37. Hat/MVI_5154.MOV,hat,train
+Days_and_Time/67. Monday/MVI_9142.MOV,monday,train
+Adjectives/94. good/MVI_5317.MOV,good,train
+Home/28. Window/MVI_4365.MOV,window,train
+Colours/47. Red/MVI_5037.MOV,red,train
+Places/23. Court/MVI_3454.MOV,court,train
+Seasons/64. Fall/MVI_4577.MOV,fall,train
+Home/28. Window/MVI_4883.MOV,window,train
+Greetings/48. Hello/MVI_0032.MOV,hello,train
+Adjectives/91. new/MVI_9341.MOV,new,train
+Jobs/84. Teacher/MVI_4746.MOV,teacher,train
+Adjectives/97. dry/MVI_9359.MOV,dry,train
+Places/28. Store or Shop/MVI_3386.MOV,store or shop,train
+Society/2. Death/MVI_8932.MOV,death,train
+Adjectives/3. happy/MVI_9454.MOV,happy,train
+Seasons/64. Fall/MVI_5000.MOV,fall,train
+Animals/5. Cow/MVI_2992.MOV,cow,train
+Jobs/91. Priest/MVI_8889.MOV,priest,train
+Places/28. Store or Shop/Extra/MVI_3637.MOV,store or shop,train
+Days_and_Time/86. Time/MVI_4669.MOV,time,train
+Greetings/55. Thank you/MVI_0063.MOV,thank you,train
+Adjectives/3. happy/MVI_9296.MOV,happy,train
+Animals/5. Cow/MVI_3099.MOV,cow,train
+Greetings/55. Thank you/MVI_0060.MOV,thank you,train
+Electronics/54. Cell phone/MVI_4968.MOV,cell phone,train
+Electronics/54. Cell phone/MVI_9101.MOV,cell phone,train
+Days_and_Time/86. Time/MVI_9201.MOV,time,train
+Pronouns/44. it/MVI_9937.MOV,it,train
+Adjectives/97. dry/MVI_5328.MOV,dry,train
+People/77. Boy/MVI_4983.MOV,boy,train
+Greetings/51. Good Morning/MVI_9933.MOV,good morning,train
+Adjectives/2. quiet/MVI_5261.MOV,quiet,train
+Adjectives/83. big large/MVI_9318.MOV,big large,train
+Means_of_Transportation/11. Car/MVI_8583.MOV,car,train
+Days_and_Time/67. Monday/MVI_9143.MOV,monday,train
+Home/28. Window/MVI_4882.MOV,window,train
+Adjectives/87. hot/MVI_5217.MOV,hot,train
+Adjectives/3. happy/MVI_9542.MOV,happy,train
+Adjectives/79. short/MVI_5269.MOV,short,train
+Adjectives/83. big large/MVI_5285.MOV,big large,train
+People/78. Girl/MVI_3966.MOV,girl,train
+Animals/4. Bird/MVI_3012.MOV,bird,train
+Jobs/91. Priest/MVI_4489.MOV,priest,train
+Pronouns/40. I/MVI_9920.MOV,i,train
+Animals/4. Bird/Extra/MVI_3045.MOV,bird,train
+Days_and_Time/78. Year/MVI_5493.MOV,year,train
+Animals/5. Cow/MVI_3047.MOV,cow,train
+Places/23. Court/MVI_3609.MOV,court,train
+Adjectives/84. small little/MVI_9321.MOV,small little,train
+Adjectives/83. big large/MVI_9235.MOV,big large,train
+Adjectives/87. hot/MVI_9330.MOV,hot,train
+Places/19. House/MVI_3594.MOV,house,train
+Adjectives/84. small little/MVI_5286.MOV,small little,train
+Clothes/37. Hat/MVI_3691.MOV,hat,train
+Pronouns/40. I/MVI_9919.MOV,i,train
+Places/35. Bank/Extra/MVI_3420.MOV,bank,train
+Colours/54. Black/MVI_8619.MOV,black,train
+People/78. Girl/MVI_5135.MOV,girl,train
+Greetings/48. Hello/MVI_9983.MOV,hello,train
+Adjectives/94. good/MVI_5160.MOV,good,train
+Adjectives/87. hot/MVI_5297.MOV,hot,train
+Colours/54. Black/MVI_5208.MOV,black,train
+Animals/5. Cow/MVI_2990.MOV,cow,train
+Electronics/53. Fan/MVI_5389.MOV,fan,train
+Greetings/48. Hello/MVI_0090.MOV,hello,train
+Adjectives/97. dry/MVI_9360.MOV,dry,train
+Clothes/42. T-Shirt/MVI_4202.MOV,t-shirt,train
+Animals/1. Dog/MVI_4146.MOV,dog,train
+Clothes/44. Shoes/MVI_5030.MOV,shoes,train
+Means_of_Transportation/11. Car/MVI_3238.MOV,car,train
+Adjectives/3. happy/MVI_9295.MOV,happy,train
+Adjectives/79. short/MVI_9381.MOV,short,train
+Places/23. Court/MVI_3453.MOV,court,train
+Adjectives/94. good/MVI_9511.MOV,good,train
+Places/23. Court/MVI_3287.MOV,court,train
+Greetings/51. Good Morning/MVI_0042.MOV,good morning,train
+Days_and_Time/67. Monday/MVI_4592.MOV,monday,train
+Places/28. Store or Shop/MVI_3554.MOV,store or shop,train
+Jobs/91. Priest/MVI_5344.MOV,priest,train
+Adjectives/1. loud/MVI_5257.MOV,loud,train
+Home/40. Paint/MVI_9053.MOV,paint,train
+Means_of_Transportation/16. train ticket/MVI_3226.MOV,train ticket,train
+Adjectives/3. happy/MVI_9374.MOV,happy,train
+People/61. Father/MVI_4061.MOV,father,train
+Home/28. Window/MVI_8766.MOV,window,train
+Animals/1. Dog/MVI_3085.MOV,dog,train
+Pronouns/46. you (plural)/MVI_9976.MOV,you (plural),train
+Home/34. Pen/MVI_4907.MOV,pen,train
+Pronouns/44. it/MVI_9936.MOV,it,train
+Jobs/91. Priest/MVI_8887.MOV,priest,train
+Pronouns/40. I/MVI_9957.MOV,i,train
+Adjectives/79. short/MVI_5111.MOV,short,train
+Greetings/55. Thank you/MVI_0111.MOV,thank you,train
+Clothes/44. Shoes/MVI_3712.MOV,shoes,train
+Adjectives/84. small little/MVI_9238.MOV,small little,train
+Animals/4. Bird/MVI_4155.MOV,bird,train
+Animals/5. Cow/MVI_3074.MOV,cow,train
+Pronouns/46. you (plural)/MVI_0024.MOV,you (plural),train
+Animals/4. Bird/MVI_3013.MOV,bird,train
+Adjectives/2. quiet/MVI_5182.MOV,quiet,train
+Pronouns/44. it/MVI_0016.MOV,it,train
+Colours/54. Black/MVI_3741.MOV,black,train
+Home/34. Pen/MVI_9034.MOV,pen,train
+Colours/55. White/MVI_5210.MOV,white,train
+Pronouns/40. I/MVI_9878.MOV,i,train
+Adjectives/87. hot/MVI_5218.MOV,hot,train
+Adjectives/1. loud/MVI_5335.MOV,loud,train
+People/78. Girl/MVI_5137.MOV,girl,train
+Adjectives/87. hot/MVI_9409.MOV,hot,train
+Places/19. House/MVI_3596.MOV,house,train
+Adjectives/2. quiet/MVI_9452.MOV,quiet,train
+Adjectives/87. hot/MVI_5296.MOV,hot,train
+Colours/54. Black/MVI_5060.MOV,black,train
+Electronics/53. Fan/MVI_4534.MOV,fan,train
+Clothes/42. T-Shirt/MVI_5169.MOV,t-shirt,train
+Adjectives/87. hot/MVI_5295.MOV,hot,train
+Pronouns/46. you (plural)/MVI_9977.MOV,you (plural),train
+Places/35. Bank/MVI_3662.MOV,bank,train
+Greetings/55. Thank you/MVI_9985.MOV,thank you,train
+Means_of_Transportation/11. Car/MVI_4176.MOV,car,train
+People/77. Boy/MVI_3963.MOV,boy,train
+Society/14. Election/MVI_4307.MOV,election,train
+Animals/4. Bird/MVI_8568.MOV,bird,train
+Adjectives/78. long/MVI_5187.MOV,long,train
+Colours/47. Red/MVI_4017.MOV,red,train
+Days_and_Time/67. Monday/MVI_4594.MOV,monday,train
+Adjectives/84. small little/MVI_9319.MOV,small little,train
+Places/19. House/MVI_3593.MOV,house,train
+People/78. Girl/MVI_3967.MOV,girl,train
+Pronouns/44. it/MVI_9970.MOV,it,train
+People/61. Father/MVI_4941.MOV,father,train
+Places/19. House/MVI_3267.MOV,house,train
+Adjectives/83. big large/MVI_9233.MOV,big large,train
+Places/35. Bank/MVI_3663.MOV,bank,train
+Greetings/51. Good Morning/MVI_0099.MOV,good morning,val
+Means_of_Transportation/11. Car/MVI_3240.MOV,car,val
+Adjectives/3. happy/MVI_9456.MOV,happy,val
+Animals/4. Bird/MVI_3011.MOV,bird,val
+Days_and_Time/86. Time/MVI_9204.MOV,time,val
+Animals/5. Cow/MVI_4158.MOV,cow,val
+Adjectives/97. dry/MVI_5248.MOV,dry,val
+Adjectives/84. small little/MVI_9237.MOV,small little,val
+Colours/54. Black/MVI_4039.MOV,black,val
+Pronouns/40. I/MVI_9922.MOV,i,val
+Places/23. Court/MVI_3532.MOV,court,val
+Pronouns/46. you (plural)/MVI_0032.MOV,you (plural),val
+Adjectives/78. long/MVI_5267.MOV,long,val
+People/66. Brother/MVI_5245.MOV,brother,val
+Adjectives/2. quiet/MVI_9537.MOV,quiet,val
+Greetings/51. Good Morning/MVI_0044.MOV,good morning,val
+Electronics/54. Cell phone/MVI_5394.MOV,cell phone,val
+Adjectives/94. good/MVI_5159.MOV,good,val
+Days_and_Time/67. Monday/MVI_5448.MOV,monday,val
+Animals/1. Dog/MVI_8561.MOV,dog,val
+Seasons/61. Summer/MVI_5422.MOV,summer,val
+Jobs/91. Priest/MVI_8888.MOV,priest,val
+Colours/47. Red/MVI_3866.MOV,red,val
+Places/19. House/MVI_3514.MOV,house,val
+Places/19. House/MVI_3269.MOV,house,val
+Adjectives/1. loud/MVI_9534.MOV,loud,val
+Clothes/44. Shoes/MVI_3856.MOV,shoes,val
+Adjectives/83. big large/MVI_5125.MOV,big large,val
+Colours/55. White/MVI_5063.MOV,white,val
+People/78. Girl/MVI_4115.MOV,girl,val
+Colours/55. White/MVI_3744.MOV,white,val
+Adjectives/91. new/MVI_9423.MOV,new,val
+Clothes/44. Shoes/MVI_4008.MOV,shoes,val
+Greetings/48. Hello/MVI_0039.MOV,hello,val
+People/66. Brother/MVI_3778.MOV,brother,val
+Places/35. Bank/MVI_3661.MOV,bank,val
+Adjectives/84. small little/MVI_5208.MOV,small little,val
+Adjectives/2. quiet/MVI_5340.MOV,quiet,val
+Clothes/42. T-Shirt/MVI_5023.MOV,t-shirt,val
+Means_of_Transportation/16. train ticket/MVI_4192.MOV,train ticket,val
+Adjectives/97. dry/MVI_9361.MOV,dry,val
+People/77. Boy/MVI_3962.MOV,boy,val
+Places/28. Store or Shop/MVI_3633.MOV,store or shop,val
+Pronouns/40. I/MVI_0003.MOV,i,val
+Means_of_Transportation/11. Car/MVI_3118.MOV,car,val
+Jobs/84. Teacher/MVI_4745.MOV,teacher,val
+Home/28. Window/MVI_9013.MOV,window,val
+Days_and_Time/78. Year/MVI_9175.MOV,year,val
+Places/23. Court/MVI_3284.MOV,court,val
+Adjectives/79. short/MVI_9302.MOV,short,val
+Society/2. Death/MVI_8663.MOV,death,val
+Animals/5. Cow/MVI_4159.MOV,cow,val
+Adjectives/94. good/MVI_9350.MOV,good,val
+Clothes/37. Hat/MVI_3837.MOV,hat,val
+Pronouns/44. it/MVI_9939.MOV,it,val
+Greetings/55. Thank you/MVI_0112.MOV,thank you,val
+Adjectives/3. happy/MVI_9376.MOV,happy,val
+Adjectives/91. new/MVI_9261.MOV,new,val
+Electronics/53. Fan/MVI_4964.MOV,fan,val
+Adjectives/79. short/MVI_5190.MOV,short,val
+Seasons/64. Fall/MVI_5433.MOV,fall,val
+Society/14. Election/MVI_4306.MOV,election,val
+People/78. Girl/MVI_4986.MOV,girl,val
+Animals/4. Bird/MVI_4156.MOV,bird,val
+Adjectives/83. big large/MVI_9396.MOV,big large,val
+People/77. Boy/MVI_3815.MOV,boy,val
+People/61. Father/MVI_8626.MOV,father,val
+People/61. Father/MVI_3909.MOV,father,val
+Colours/47. Red/MVI_4897.MOV,red,val
+Clothes/42. T-Shirt/MVI_5171.MOV,t-shirt,val
+Places/28. Store or Shop/MVI_3307.MOV,store or shop,val
+Home/34. Pen/MVI_8795.MOV,pen,val
+Home/40. Paint/MVI_8820.MOV,paint,val
+Adjectives/1. loud/MVI_5178.MOV,loud,val
+Pronouns/46. you (plural)/MVI_9945.MOV,you (plural),val
+Adjectives/87. hot/MVI_9410.MOV,hot,val
+Places/35. Bank/MVI_3421.MOV,bank,val
+Animals/4. Bird/MVI_2988.MOV,bird,test
+Colours/54. Black/MVI_4920.MOV,black,test
+Colours/54. Black/MVI_3740.MOV,black,test
+Colours/54. Black/MVI_3742.MOV,black,test
+Colours/54. Black/MVI_5207.MOV,black,test
+Colours/54. Black/MVI_4041.MOV,black,test
+Means_of_Transportation/11. Car/MVI_3145.MOV,car,test
+Means_of_Transportation/11. Car/MVI_3174.MOV,car,test
+Means_of_Transportation/11. Car/MVI_3176.MOV,car,test
+Means_of_Transportation/11. Car/MVI_3116.MOV,car,test
+Animals/1. Dog/MVI_3086.MOV,dog,test
+Animals/1. Dog/MVI_8560.MOV,dog,test
+Animals/1. Dog/MVI_2978.MOV,dog,test
+Animals/1. Dog/MVI_3087.MOV,dog,test
+Animals/1. Dog/MVI_2980.MOV,dog,test
+Animals/1. Dog/MVI_4147.MOV,dog,test
+Animals/1. Dog/MVI_3029.MOV,dog,test
+Seasons/64. Fall/MVI_5435.MOV,fall,test
+Seasons/64. Fall/MVI_9132.MOV,fall,test
+Seasons/64. Fall/MVI_4578.MOV,fall,test
+People/61. Father/MVI_5082.MOV,father,test
+People/61. Father/MVI_5080.MOV,father,test
+Greetings/51. Good Morning/MVI_9971.MOV,good morning,test
+Greetings/51. Good Morning/MVI_9993.MOV,good morning,test
+Greetings/51. Good Morning/MVI_9992.MOV,good morning,test
+Greetings/51. Good Morning/MVI_9969.MOV,good morning,test
+Colours/47. Red/MVI_5186.MOV,red,test
+Colours/47. Red/MVI_4898.MOV,red,test
+Seasons/61. Summer/MVI_9122.MOV,summer,test
+Seasons/61. Summer/MVI_4991.MOV,summer,test
+Seasons/61. Summer/MVI_4568.MOV,summer,test
+Colours/55. White/MVI_5211.MOV,white,test
+Adjectives/1. loud/MVI_9369.MOV,loud,test
+Adjectives/1. loud/MVI_9536.MOV,loud,test
+Adjectives/1. loud/MVI_5258.MOV,loud,test
+Adjectives/1. loud/MVI_5259.MOV,loud,test
+Adjectives/1. loud/MVI_9289.MOV,loud,test
+Adjectives/1. loud/MVI_5177.MOV,loud,test
+Adjectives/2. quiet/MVI_5180.MOV,quiet,test
+Adjectives/2. quiet/MVI_9539.MOV,quiet,test
+Adjectives/2. quiet/MVI_9372.MOV,quiet,test
+Adjectives/3. happy/MVI_5183.MOV,happy,test
+Adjectives/3. happy/MVI_9297.MOV,happy,test
+Adjectives/3. happy/MVI_5263.MOV,happy,test
+Adjectives/78. long/MVI_9219.MOV,long,test
+Adjectives/78. long/MVI_9379.MOV,long,test
+Adjectives/78. long/MVI_5268.MOV,long,test
+Adjectives/78. long/MVI_5106.MOV,long,test
+Adjectives/78. long/MVI_9300.MOV,long,test
+Adjectives/78. long/MVI_9377.MOV,long,test
+Adjectives/79. short/MVI_5191.MOV,short,test
+Adjectives/79. short/MVI_9220.MOV,short,test
+Adjectives/79. short/MVI_9222.MOV,short,test
+Adjectives/79. short/MVI_9462.MOV,short,test
+Adjectives/79. short/MVI_5271.MOV,short,test
+Adjectives/79. short/MVI_9303.MOV,short,test
+Adjectives/83. big large/MVI_9395.MOV,big large,test
+Adjectives/83. big large/MVI_5283.MOV,big large,test
+Adjectives/83. big large/MVI_9475.MOV,big large,test
+Adjectives/83. big large/MVI_5203.MOV,big large,test
+Adjectives/84. small little/MVI_9397.MOV,small little,test
+Adjectives/84. small little/MVI_5127.MOV,small little,test
+Adjectives/84. small little/MVI_9320.MOV,small little,test
+Adjectives/84. small little/MVI_5206.MOV,small little,test
+Adjectives/87. hot/MVI_9408.MOV,hot,test
+Adjectives/87. hot/MVI_9487.MOV,hot,test
+Adjectives/87. hot/MVI_9489.MOV,hot,test
+Adjectives/87. hot/MVI_9329.MOV,hot,test
+Adjectives/87. hot/MVI_9248.MOV,hot,test
+Adjectives/87. hot/MVI_5216.MOV,hot,test
+Adjectives/91. new/MVI_5150.MOV,new,test
+Adjectives/91. new/MVI_5230.MOV,new,test
+Adjectives/91. new/MVI_9501.MOV,new,test
+Adjectives/94. good/MVI_9430.MOV,good,test
+Adjectives/94. good/MVI_5158.MOV,good,test
+Adjectives/94. good/MVI_5239.MOV,good,test
+Animals/5. Cow/MVI_3016.MOV,cow,test
+Animals/5. Cow/MVI_3073.MOV,cow,test
+Animals/5. Cow/MVI_3048.MOV,cow,test
+Clothes/37. Hat/MVI_8600.MOV,hat,test
+Clothes/37. Hat/MVI_5156.MOV,hat,test
+Clothes/37. Hat/MVI_5155.MOV,hat,test
+Clothes/37. Hat/MVI_3984.MOV,hat,test
+Clothes/37. Hat/MVI_3836.MOV,hat,test
+Clothes/37. Hat/MVI_4865.MOV,hat,test
+Clothes/42. T-Shirt/MVI_4004.MOV,t-shirt,test
+Clothes/42. T-Shirt/MVI_3852.MOV,t-shirt,test
+Clothes/42. T-Shirt/MVI_3704.MOV,t-shirt,test
+Clothes/44. Shoes/MVI_3858.MOV,shoes,test
+Clothes/44. Shoes/MVI_4010.MOV,shoes,test
+Clothes/44. Shoes/MVI_4889.MOV,shoes,test
+Clothes/44. Shoes/MVI_5029.MOV,shoes,test
+Days_and_Time/67. Monday/MVI_5447.MOV,monday,test
+Days_and_Time/67. Monday/MVI_4593.MOV,monday,test
+Days_and_Time/78. Year/MVI_5494.MOV,year,test
+Days_and_Time/78. Year/MVI_4638.MOV,year,test
+Days_and_Time/78. Year/MVI_4635.MOV,year,test
+Days_and_Time/78. Year/MVI_4637.MOV,year,test
+Days_and_Time/78. Year/MVI_4636.MOV,year,test
+Days_and_Time/78. Year/MVI_5049.MOV,year,test
+Days_and_Time/78. Year/MVI_9177.MOV,year,test
+Days_and_Time/86. Time/MVI_5525.MOV,time,test
+Days_and_Time/86. Time/MVI_5527.MOV,time,test
+Days_and_Time/86. Time/MVI_5077.MOV,time,test
+Electronics/53. Fan/MVI_5387.MOV,fan,test
+Electronics/53. Fan/MVI_4535.MOV,fan,test
+Electronics/53. Fan/MVI_5388.MOV,fan,test
+Electronics/54. Cell phone/MVI_5393.MOV,cell phone,test
+Electronics/54. Cell phone/MVI_4969.MOV,cell phone,test
+Electronics/54. Cell phone/MVI_4967.MOV,cell phone,test
+Electronics/54. Cell phone/MVI_4537.MOV,cell phone,test
+Greetings/48. Hello/MVI_0029.MOV,hello,test
+Greetings/48. Hello/MVI_9915.MOV,hello,test
+Greetings/48. Hello/MVI_0091.MOV,hello,test
+Greetings/48. Hello/MVI_9957.MOV,hello,test
+Greetings/48. Hello/MVI_0030.MOV,hello,test
+Greetings/48. Hello/MVI_9982.MOV,hello,test
+Greetings/48. Hello/MVI_0031.MOV,hello,test
+Greetings/55. Thank you/MVI_0006.MOV,thank you,test
+Greetings/55. Thank you/MVI_9948.MOV,thank you,test
+Greetings/55. Thank you/MVI_0113.MOV,thank you,test
+Greetings/55. Thank you/MVI_9987.MOV,thank you,test
+Greetings/55. Thank you/MVI_9951.MOV,thank you,test
+Greetings/55. Thank you/MVI_9984.MOV,thank you,test
+Greetings/55. Thank you/MVI_0060_.MOV,thank you,test
+Home/28. Window/MVI_4363.MOV,window,test
+Home/28. Window/MVI_9015.MOV,window,test
+Home/28. Window/MVI_8768.MOV,window,test
+Home/34. Pen/MVI_4906.MOV,pen,test
+Home/34. Pen/MVI_8793.MOV,pen,test
+Home/40. Paint/MVI_8821.MOV,paint,test
+Home/40. Paint/MVI_4415.MOV,paint,test
+Home/40. Paint/MVI_8817.MOV,paint,test
+Jobs/84. Teacher/MVI_4460.MOV,teacher,test
+Jobs/84. Teacher/MVI_5313.MOV,teacher,test
+Jobs/84. Teacher/MVI_4457.MOV,teacher,test
+Jobs/91. Priest/MVI_4772.MOV,priest,test
+Means_of_Transportation/16. train ticket/MVI_3253.MOV,train ticket,test
+Means_of_Transportation/16. train ticket/MVI_3132.MOV,train ticket,test
+Means_of_Transportation/16. train ticket/MVI_3225.MOV,train ticket,test
+Means_of_Transportation/16. train ticket/MVI_3197.MOV,train ticket,test
+Means_of_Transportation/16. train ticket/MVI_3195.MOV,train ticket,test
+Means_of_Transportation/16. train ticket/MVI_4193.MOV,train ticket,test
+Means_of_Transportation/16. train ticket/MVI_3163.MOV,train ticket,test
+Means_of_Transportation/16. train ticket/MVI_8597.MOV,train ticket,test
+People/66. Brother/MVI_4077.MOV,brother,test
+People/66. Brother/MVI_3929.MOV,brother,test
+People/66. Brother/MVI_5097.MOV,brother,test
+People/66. Brother/MVI_3779.MOV,brother,test
+People/66. Brother/MVI_3927.MOV,brother,test
+People/77. Boy/MVI_4111.MOV,boy,test
+People/77. Boy/MVI_5287.MOV,boy,test
+People/77. Boy/MVI_5134.MOV,boy,test
+People/77. Boy/MVI_8644.MOV,boy,test
+People/78. Girl/MVI_4985.MOV,girl,test
+People/78. Girl/MVI_5136.MOV,girl,test
+Places/23. Court/MVI_3286.MOV,court,test
+Places/23. Court/MVI_3365.MOV,court,test
+Places/23. Court/MVI_3611.MOV,court,test
+Places/19. House/Extra/MVI_3439.MOV,house,test
+Places/28. Store or Shop/MVI_3634.MOV,store or shop,test
+Places/28. Store or Shop/MVI_3384.MOV,store or shop,test
+Places/28. Store or Shop/MVI_3552.MOV,store or shop,test
+Places/28. Store or Shop/MVI_3472.MOV,store or shop,test
+Places/35. Bank/MVI_3335.MOV,bank,test
+Places/35. Bank/MVI_3581.MOV,bank,test
+Places/35. Bank/MVI_3419.MOV,bank,test
+Places/35. Bank/MVI_3584.MOV,bank,test
+Places/35. Bank/MVI_3503.MOV,bank,test
+Places/35. Bank/MVI_3338.MOV,bank,test
+Pronouns/40. I/MVI_0014.MOV,i,test
+Pronouns/40. I/MVI_0064.MOV,i,test
+Pronouns/40. I/MVI_9880.MOV,i,test
+Pronouns/44. it/MVI_9971.MOV,it,test
+Pronouns/44. it/MVI_0015.MOV,it,test
+Pronouns/44. it/MVI_0077.MOV,it,test
+Pronouns/44. it/MVI_9899.MOV,it,test
+Pronouns/44. it/MVI_0076.MOV,it,test
+Pronouns/44. it/MVI_9900.MOV,it,test
+Pronouns/44. it/MVI_0026.MOV,it,test
+Pronouns/44. it/MVI_0024.MOV,it,test
+Pronouns/44. it/MVI_9969.MOV,it,test
+Pronouns/46. you (plural)/MVI_9948.MOV,you (plural),test
+Pronouns/46. you (plural)/MVI_9907.MOV,you (plural),test
+Pronouns/46. you (plural)/MVI_9905.MOV,you (plural),test
+Society/14. Election/MVI_4841.MOV,election,test
+Society/14. Election/MVI_8967.MOV,election,test
+Society/2. Death/MVI_8931.MOV,death,test
+Society/2. Death/MVI_4801.MOV,death,test
+Society/2. Death/MVI_4800.MOV,death,test
+Society/2. Death/MVI_4255.MOV,death,test
+Society/2. Death/MVI_4256.MOV,death,test

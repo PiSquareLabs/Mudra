@@ -1,0 +1,15 @@
+Adjectives
+Animals
+Clothes
+Colours
+Days_and_Time
+Electronics
+Greetings
+Home
+Jobs
+Means_of_Transportation
+People
+Places
+Pronouns
+Seasons
+Society

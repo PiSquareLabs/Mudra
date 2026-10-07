@@ -161,6 +161,41 @@ def find_videos(root):
     return sorted(p for p in Path(root).rglob("*") if p.is_file() and p.suffix.lower() in VIDEO_EXTS)
 
 
+def norm_cat(name):
+    return re.sub(r"[\s_\-]+", "", name).lower()
+
+
+def entries_from_csv(csv_path, category=None):
+    """Rows of the split CSV as entries; ids are CSV row numbers so resume works across runs."""
+    out = []
+    with open(csv_path, newline="") as f:
+        for i, r in enumerate(csv.DictReader(f)):
+            if category and norm_cat(r["video_path"].split("/")[0]) != norm_cat(category):
+                continue
+            out.append(dict(id=i, video_path=r["video_path"], label=r["label"],
+                            split=r["split"], signer="unknown"))
+    return out
+
+
+def entries_from_none(none_dir, video_root, first_id):
+    """Non-sign clips: label 'none', every 5th clip (sorted) goes to test, the rest to train."""
+    out = []
+    for k, v in enumerate(find_videos(none_dir)):
+        rel = Path(os.path.relpath(v, video_root)).as_posix()
+        out.append(dict(id=first_id + k, video_path=rel, label="none",
+                        split="test" if k % 5 == 4 else "train", signer="unknown"))
+    return out
+
+
+def entries_from_folder(root, signer_regex):
+    out = []
+    for i, v in enumerate(find_videos(root)):
+        rel = v.relative_to(root).as_posix()
+        out.append(dict(id=i, video_path=rel, label=clean_label(v.parent.name),
+                        split="", signer=signer_of(rel, signer_regex)))
+    return out
+
+
 def extract_video(extractor, path):
     import cv2
 
@@ -178,39 +213,111 @@ def extract_video(extractor, path):
     return np.stack(frames) if frames else np.zeros((0, 61, 2), np.float32)
 
 
+_EXTRACTOR = None
+
+
+def _init_worker(models_dir):
+    global _EXTRACTOR
+    _EXTRACTOR = LandmarkExtractor(models_dir)
+
+
+def _work(job):
+    """Process one video in a worker; returns (id, status). Writes the .npy itself."""
+    vid, path, dest = job
+    try:
+        arr = extract_video(_EXTRACTOR, path)
+    except Exception as e:  # keep the pool alive on a corrupt video
+        return vid, f"error: {e}"
+    if len(arr) == 0 or not np.any(np.isfinite(arr[:, 19:, 0])):
+        return vid, "nohand"
+    np.save(dest, arr.astype(np.float32))
+    return vid, "ok"
+
+
+def write_index(entries, out):
+    """Rebuild index.csv from every entry whose .npy exists (accumulates across runs)."""
+    rows = []
+    for e in entries:
+        p = out / "landmarks" / f"{e['id']}.npy"
+        if p.exists():
+            frames = np.load(p, mmap_mode="r").shape[0]
+            rows.append([e["id"], e["video_path"], e["label"], e["split"], e["signer"], frames])
+    with open(out / "index.csv", "w", newline="") as f:
+        w = csv.writer(f)
+        w.writerow(["id", "video_path", "label", "split", "signer", "frames"])
+        w.writerows(rows)
+    return len(rows)
+
+
+def run(entries, video_root, out, workers=2, models_dir="models"):
+    import multiprocessing as mp
+
+    out = Path(out)
+    (out / "landmarks").mkdir(parents=True, exist_ok=True)
+    skipped_file = out / "skipped.txt"
+    known_skips = set(skipped_file.read_text().splitlines()) if skipped_file.exists() else set()
+    jobs, missing, done = [], 0, 0
+    for e in entries:
+        dest = out / "landmarks" / f"{e['id']}.npy"
+        src = Path(video_root) / e["video_path"]
+        if dest.exists() or e["video_path"] in known_skips:
+            done += 1
+        elif not src.exists():
+            missing += 1
+        else:
+            jobs.append((e["id"], str(src), str(dest)))
+    print(f"{len(entries)} entries: {done} already done, {missing} videos not present, {len(jobs)} to process")
+    paths = {e["id"]: e["video_path"] for e in entries}
+    if jobs:
+        # Fail fast with the real error: a Pool whose initializer keeps crashing just respawns forever.
+        LandmarkExtractor(models_dir).close()
+        new_skips = []
+        ctx = mp.get_context("spawn")
+        with ctx.Pool(workers, _init_worker, (models_dir,)) as pool:
+            for n, (vid, status) in enumerate(pool.imap_unordered(_work, jobs), 1):
+                if status != "ok":
+                    print(f"SKIP ({status}): {paths[vid]}")
+                    if status == "nohand":
+                        new_skips.append(paths[vid])
+                if n % 25 == 0:
+                    print(f"{n}/{len(jobs)}")
+        if new_skips:
+            with open(skipped_file, "a") as f:
+                f.write("\n".join(new_skips) + "\n")
+    return write_index(entries, out)
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__)
-    ap.add_argument("root", help="root folder of videos (label = parent folder name)")
+    ap.add_argument("root", nargs="?", help="folder mode: root folder of videos (label = parent folder)")
+    ap.add_argument("--csv", help="split CSV (video_path, label, split), e.g. data/include50.csv")
+    ap.add_argument("--video-root", default="data/include/", help="CSV mode: videos live under this folder")
+    ap.add_argument("--category", help="CSV mode: only this category (first path component), e.g. Greetings")
+    ap.add_argument("--none-dir", help="optional folder of non-sign clips (label 'none')")
     ap.add_argument("--out", default="out")
-    ap.add_argument("--signer-regex", default=None, help="group 1 on the relative path = signer ID")
+    ap.add_argument("--workers", type=int, default=max(1, min(4, (os.cpu_count() or 2) // 2)))
+    ap.add_argument("--signer-regex", default=None, help="folder mode: group 1 on the relative path = signer ID")
     ap.add_argument("--models-dir", default="models")
     args = ap.parse_args()
 
-    out = Path(args.out)
-    (out / "landmarks").mkdir(parents=True, exist_ok=True)
-    videos = find_videos(args.root)
-    print(f"{len(videos)} videos found")
-    extractor = LandmarkExtractor(args.models_dir)
-    rows, skipped = [], []
-    for i, v in enumerate(videos):
-        rel = v.relative_to(args.root).as_posix()
-        arr = extract_video(extractor, v)
-        if len(arr) == 0 or not np.any(np.isfinite(arr[:, 19:, 0])):
-            print(f"SKIP (no hand detected): {rel}")
-            skipped.append(rel)
-            continue
-        n = len(rows)
-        np.save(out / "landmarks" / f"{n}.npy", arr.astype(np.float32))
-        rows.append((f"landmarks/{n}.npy", clean_label(v.parent.name), signer_of(rel, args.signer_regex), len(arr)))
-        if (i + 1) % 50 == 0:
-            print(f"{i + 1}/{len(videos)}")
-    extractor.close()
-    with open(out / "index.csv", "w", newline="") as f:
-        wr = csv.writer(f)
-        wr.writerow(["path", "label", "signer", "frames"])
-        wr.writerows(rows)
-    (out / "skipped.txt").write_text("\n".join(skipped))
-    print(f"Saved {len(rows)} clips, skipped {len(skipped)} -> {out}")
+    if args.csv:
+        entries = entries_from_csv(args.csv, args.category)
+        if args.none_dir and (not args.category or norm_cat(args.category) == "none"):
+            first = sum(1 for _ in open(args.csv)) - 1
+            entries += entries_from_none(args.none_dir, args.video_root, first)
+        root = args.video_root
+        # index covers the full CSV so rows from earlier category runs are kept
+        index_entries = entries_from_csv(args.csv)
+        if args.none_dir:
+            index_entries += entries_from_none(args.none_dir, args.video_root, len(index_entries))
+    elif args.root:
+        entries = index_entries = entries_from_folder(args.root, args.signer_regex)
+        root = args.root
+    else:
+        ap.error("give a root folder or --csv")
+    run(entries, root, args.out, args.workers, args.models_dir)
+    n = write_index(index_entries, Path(args.out))
+    print(f"index.csv: {n} clips in {args.out}")
 
 
 if __name__ == "__main__":

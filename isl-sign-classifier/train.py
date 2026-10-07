@@ -43,6 +43,15 @@ def load_index(data):
         return list(csv.DictReader(f))
 
 
+def official_split(rows):
+    """Use the CSV's own train / val / test column (val picks the checkpoint, test is for the report)."""
+    cols = np.array([r["split"] for r in rows])
+    parts = {k: np.nonzero(cols == k)[0] for k in ("train", "val", "test")}
+    if not len(parts["train"]) or not len(parts["val"]):
+        raise SystemExit("--split-col needs rows labelled 'train' and 'val'; extract more categories first.")
+    return parts["train"], parts["val"], parts["test"]
+
+
 def split(rows, val_signers, seed):
     signers = np.array([r["signer"] for r in rows])
     labels = np.array([r["label"] for r in rows])
@@ -88,6 +97,8 @@ def main():
     ap.add_argument("--blocks", type=int, default=6)
     ap.add_argument("--max-classes", type=int, default=0)
     ap.add_argument("--val-signers", default="")
+    ap.add_argument("--split-col", default=None,
+                    help="index.csv column with train/val/test (use 'split' for the official INCLUDE-50 split)")
     ap.add_argument("--seed", type=int, default=0)
     args = ap.parse_args()
     out = args.out or args.data
@@ -101,12 +112,18 @@ def main():
     labels = sorted({r["label"] for r in rows})
     lid = {l: i for i, l in enumerate(labels)}
     y = np.array([lid[r["label"]] for r in rows])
-    clips = [np.load(os.path.join(args.data, r["path"])) for r in rows]
+    clips = [np.load(os.path.join(args.data, "landmarks", f"{r['id']}.npy")) for r in rows]
     print(f"{len(rows)} clips, {len(labels)} classes")
 
-    val_signers = [s for s in args.val_signers.split(",") if s]
-    tr, va = split(rows, val_signers, args.seed)
-    print(f"train {len(tr)} / val {len(va)}")
+    te = np.array([], dtype=int)
+    if args.split_col:
+        for r in rows:
+            r["split"] = r[args.split_col]
+        tr, va, te = official_split(rows)
+    else:
+        val_signers = [s for s in args.val_signers.split(",") if s]
+        tr, va = split(rows, val_signers, args.seed)
+    print(f"train {len(tr)} / val {len(va)} / test {len(te)}")
     train_seq = SignSequence([clips[i] for i in tr], y[tr], len(labels), args.batch, True, args.seed)
     val_seq = SignSequence([clips[i] for i in va], y[va], len(labels), args.batch, False)
 
@@ -126,7 +143,12 @@ def main():
                                                    mode="max", save_best_only=True)],
     )
     best = keras.models.load_model(model_path)
-    report(best, val_seq, y[va], labels)
+    if len(te):
+        print("\n=== Final report on the official TEST split ===")
+        test_seq = SignSequence([clips[i] for i in te], y[te], len(labels), args.batch, False)
+        report(best, test_seq, y[te], labels)
+    else:
+        report(best, val_seq, y[va], labels)
 
 
 if __name__ == "__main__":

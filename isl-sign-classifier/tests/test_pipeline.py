@@ -104,3 +104,58 @@ def test_tiny_model_train_save_export(tmp_path):
 
     paths = E.export(reloaded, str(tmp_path))
     assert E.verify(reloaded, paths, n=20)
+
+
+# ----------------------------- INCLUDE-50 split / per-category extraction ----------------------------- #
+def test_prepare_split_labels_and_crlf(tmp_path):
+    import prepare_split as P
+
+    assert P.label_of("Greetings/48. Hello/MVI_0089.MOV") == "hello"
+    assert P.label_of("Places/28. Store or Shop/Extra/MVI_3636.MOV") == "store or shop"
+    f = tmp_path / "s.txt"
+    f.write_bytes(b"A/1. X/a.MOV\r\nA/2. Y/b.MOV\r\n\r\nA/3. Z/c.MOV")  # CRLF, blank line, no final newline
+    assert P.read_split(f) == ["A/1. X/a.MOV", "A/2. Y/b.MOV", "A/3. Z/c.MOV"]
+
+
+def test_official_split_files_give_50_labels():
+    import csv
+    import prepare_split as P
+
+    d = os.path.join(os.path.dirname(__file__), "..", "data", "splits")
+    labels = {P.label_of(p) for s in P.SPLITS for p in P.read_split(f"{d}/include50_{s}.txt")}
+    assert len(labels) == 50
+
+
+def test_category_extraction_skips_missing_and_resumes(tmp_path):
+    import csv
+    import extract_landmarks as X
+
+    csv_path = tmp_path / "include50.csv"
+    with open(csv_path, "w", newline="") as f:
+        w = csv.writer(f)
+        w.writerow(["video_path", "label", "split"])
+        w.writerows([("Greetings/1. Hello/a.MOV", "hello", "train"),
+                     ("Days_and_Time/2. Monday/b.MOV", "monday", "test"),
+                     ("Greetings/1. Hello/c.MOV", "hello", "val")])
+    ents = X.entries_from_csv(csv_path, "greetings")
+    assert [e["id"] for e in ents] == [0, 2]
+    assert [e["id"] for e in X.entries_from_csv(csv_path, "Days and Time")] == [1]
+
+    out = tmp_path / "out"
+    (out / "landmarks").mkdir(parents=True)
+    np.save(out / "landmarks" / "0.npy", np.zeros((7, 61, 2), np.float32))  # already extracted
+    # video root is empty: video 2 is missing -> skipped without error, video 0 resumes from its .npy
+    n = X.run(ents, tmp_path / "videos", out)
+    assert n == 1
+    rows = list(csv.DictReader(open(out / "index.csv")))
+    assert rows[0]["id"] == "0" and rows[0]["frames"] == "7" and rows[0]["split"] == "train"
+
+
+def test_official_split_selection():
+    import train as TR
+
+    rows = [{"split": s} for s in ["train", "train", "val", "test", "test"]]
+    tr, va, te = TR.official_split(rows)
+    assert list(tr) == [0, 1] and list(va) == [2] and list(te) == [3, 4]
+    with pytest.raises(SystemExit):
+        TR.official_split([{"split": "train"}])
